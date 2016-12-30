@@ -1,0 +1,6 @@
+.template, #idea_details {
+	display:none;
+}
+.idea {
+	cursor: pointer;
+}

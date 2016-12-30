@@ -1,0 +1,27 @@
+# PHP Fehler nicht in der HTTP-Antwort ausgeben
+#php_value display_errors 0
+
+# PHP Fehler im Windows Ereignisprotokoll ausgeben
+#php_value error_log syslog
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^ideas$ RequestHandler.php?command=GetIdeasCommand
+
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^ideas/(.+)$ RequestHandler.php?command=GetIdeaCommand&id=$1
+
+RewriteCond %{REQUEST_METHOD} POST
+RewriteRule ^ideas$ RequestHandler.php?command=CreateIdeaCommand
+
+RewriteCond %{REQUEST_METHOD} DELETE
+RewriteRule ^ideas/(.+)$ RequestHandler.php?command=DeleteIdeaCommand&id=$1
+
+RewriteCond %{REQUEST_METHOD} PUT
+RewriteRule ^ideas/(.+)$ RequestHandler.php?command=UpdateIdeaCommand&id=$1
+
+AuthType Basic
+AuthName "Ideenmanagement"
+AuthUserFile "C:\xampp\htdocs\MobileDev16-17\WebService\.htusers"
+Require valid-user
