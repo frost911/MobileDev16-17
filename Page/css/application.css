@@ -4,3 +4,21 @@
 .idea {
 	cursor: pointer;
 }
+.wrapper{
+    padding: 10px;
+    background: white;
+}
+.header {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+.menu {}
+.content {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;    
+}
+.footer {}
