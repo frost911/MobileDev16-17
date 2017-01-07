@@ -29,6 +29,7 @@
         <div id="menu_bar">
             <a class="show_ideas" href="#">Alle Ideen</a>
             <a class="create_idea" href="#">Neue Idee</a>
+            <div class ="current_userdiv">Eingeloggt als:<span class="current_user"></span></div>
         </div>
 
         <div class="content">  
@@ -36,13 +37,14 @@
             <h3>Ideen-Liste</h3>
                         <div class="idea template">
                                 <span>Wer?</span>
-                                <span class="author"></span>
+                                <b><span class="author"></span></b>
                                 <span>|</span>
-                                <span>Wann?</span>
+                                <span>Wann?</span><br>
                                 <span class="updated"></span>
-                                <span class="title"></span>
+                                <b><span class="title"></span></b><br>
+                                <span class="buttons">
                                 <a class="edit_idea" href="#">Bearbeiten</a>
-                                <a class="delete_idea" href="#">Löschen</a>
+                                <a class="delete_idea" href="#">Löschen</a></span>
                         </div>
             </div>
                 <div id="error_dialog" title="Fehler">
@@ -53,7 +55,7 @@
                 </div>
                 <div id="idea_details">
                         <span>Wer?</span>
-                        <span class="author"></span>
+                        <b><span class="author"></span></b>
                         <span>|</span>
                         <span>Wann?</span>
                         <span class="updated"></span>
