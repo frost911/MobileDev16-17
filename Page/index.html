@@ -22,8 +22,7 @@
         <div class ="wrapper">
             <div class="header">
                 <h2>Internes Innovationsmanagement</h2>
-                <p> Hier haben Sie die Möglichkeit Ideen und Vorschläge in unser Unternehmen einzubringen. </p>
-
+                <p>Sie haben auf dieser Seite die Möglichkeit Ideen und Vorschläge in unser Unternehmen einzubringen. </p>
             </div>   
 
             <div id="menu_bar">
@@ -33,18 +32,17 @@
             </div>
 
             <div class="content">  
-
                 <div id="idea_list">
-                    <h3>Ideen-Liste</h3>
-                    <div class="idea template">
-                        <b><span class="title"></span></b><br>
+                    <div class="template">
+                        <h3><span class="title"></span></h3><br>
                         <span>Wer?</span>
                         <b><span class="author"></span></b>
-                        <span>Wann?</span><br>
-                        <span>Aktzeptiert: </span><br>
-                        <b><span class="accepted_list"></span></b>
-                        <span>Kommentiert: </span><br>
-                        <b><span class="accepted_list"></span></b>
+                        <span>Wann?</span>
+                        <b><span class="created"></span></b><br>
+                        <span>Akzeptiert: </span>
+                        <b><span class="accepted"></span></b>
+                        <span>Kommentiert: </span>
+                        <b><span class="comment"></span></b><br>
                         <span class="updated"></span>
                         <span class="buttons">
                             <a class="edit_idea" href="#">Bearbeiten</a>
@@ -71,14 +69,15 @@
                     <div style="width:900px; margin:10px; height:500px;">
                         <div class="idea_details_left">
                             <b><span>Wer? </span></b> <span class="author"></span><br>
-                            <b><span>Wann?</span></b>  <span class="created"></span><br>
-                            <b><span>Update am:</span></b> <span class="updated"></span><br>
-                            <b><span>Kommentar:</span></b>  <span class="comment"></span><br> 
-                            <b><span>Idee Aktzeptiert: </span></b> <span class="accepted"></span> 
+                            <b><span>Wann?</span></b> <br> <span class="created"></span><br>
+                            <b><span>Update am:</span></b><br> <span class="updated"></span><br>
+                            <b><span>Idee Akzeptiert: </span></b> <span class="accepted"></span> 
                         </div>
                         <div class="idea_details_right">
                             <b><span>Inhalt:</span></b><br>
                             <span class="description"></span><br>
+                            <b><span>Kommentar:</span></b><br>
+                            <span class="comment"></span><br> 
                         </div>
                     </div>   
                 </div>
@@ -87,7 +86,6 @@
                     <form>
                         <table>
                             <tr>
-                                <td/>
                                 <td colspan="2"><span class="validation_message ui-state-error-text"></span></td>
                             </tr>
                             <tr>
@@ -102,11 +100,11 @@
                             </tr>
                             <tr>
                                 <td><label for="comment_field">Kommentar</label></td>
-                                <td colspan="2"><textarea id="description_field"></textarea></td>
+                                <td colspan="2"><textarea id="comment_field"></textarea></td>
                             </tr>
                             <tr>
-                                <td><label for="accepted_field">Aktzeptiert</label></td>
-                                <td colspan="2"><input type="checkbox" name="zutat" value="sardellen"></td>
+                                <td><label for="accepted_field">Akzeptiert</label></td>
+                                <td colspan="2"><input type="checkbox" id ="accepted_field"></td>
                             </tr>
                         </table>
                     </form>

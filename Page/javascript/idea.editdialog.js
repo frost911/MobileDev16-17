@@ -23,11 +23,15 @@ $.widget("idea.editDialog", $.ui.dialog,{
 	_create: function(){
 		var that = this;
 		var ok = this.options.buttons[0];
+                //console.log($('#accepted_field'));
 		ok.click = function(){
 			var idea = {
 				title: that.element.find("#title_field").val(),
-				description: that.element.find("#description_field").val()
+				description: that.element.find("#description_field").val(),
+                                comment: that.element.find("#comment_field").val(),
+                                accepted: document.getElementById("accepted_field").checked  
 			};
+                        console.log(idea);
 			$.ajax({
 				type: "PUT",
 				url: that._idea.url,
@@ -45,10 +49,8 @@ $.widget("idea.editDialog", $.ui.dialog,{
 						that.element.find(".validation_message").text(validationMessages.title);
 						that.element.find("#title_field").addClass("ui-state-error").focus();
 					}
-					//Verschiedene Status und Felder abfragen
 				}
-			});
-			
+			});	
 		};
 		var cancel = this.options.buttons[1];
 		cancel.click = function(){

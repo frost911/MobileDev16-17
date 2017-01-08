@@ -8,6 +8,19 @@ $.widget("idea.ideaDetails",{
 		});
 	},
 	_loadIdea: function(idea){
+            
+                        if(idea.updated === null){
+                            idea.updated = "Kein Update bisher!";   
+                        }
+                        if(idea.comment === null){
+                            idea.comment = "Kein Kommentar Vorhanden!";   
+                        }
+                        if(idea.accepted === null || idea.accepted === false || idea.accepted === 0 || idea.accepted === "0" ){
+                            idea.accepted = "Nein!";   
+                        }
+                        if(idea.accepted === true){
+                            idea.accepted = "Ja!";   
+                        }                        
 			this.element.find(".title").text(idea.title);
 			this.element.find(".author").text(idea.author);
                         this.element.find(".created").text(idea.created);

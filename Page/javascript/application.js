@@ -5,6 +5,7 @@ $(function() {
 		}
 		$("#error_dialog").errorDialog("open", response.statusText);
 		$("#idea_details").hide();
+                $("#idea template").hide();
 		$("#idea_list").show();
 		if(response.status == 404){
 			$("#idea_list").ideaList("reload");
@@ -46,9 +47,9 @@ $(function() {
 	});
 	$("#menu_bar").menuBar({
 		onAllIdeasClicked: function(){
-			$("#idea_list").ideaList("reload");
 			$("#idea_details").hide();
 			$("#idea_list").show();
+                        $("#idea_list").ideaList("reload");
 		},
 		onCreateIdeaClicked: function(){
 			$("#idea_details").hide();
