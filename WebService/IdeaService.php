@@ -82,7 +82,6 @@ class IdeaService{
 			return $result;
 		}
 		$statement =	"INSERT INTO idea SET ".
-						"created_date = CURDATE(), ".
 						"title = '$idea->title', ".
 						"version = 1, ".
 						"description = '$idea->description'";

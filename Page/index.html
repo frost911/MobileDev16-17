@@ -1,97 +1,125 @@
 ﻿<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8"/>
-    <title>Ideen-Liste</title>
-    <link rel="stylesheet" href="./css/jquery-ui-1.10.4.css" />
-    <link rel="stylesheet" href="./css/application.css" />
-    <script src="./javascript/jquery-1.10.2.js" type="text/javascript"></script>
-	<script src="./javascript/jquery.blockUI.js" type="text/javascript"></script>
-	<script src="./javascript/jquery.ui.datepicker-de.js" type="text/javascript"></script>
-    <script src="./javascript/jquery-ui-1.10.4.js" type="text/javascript"></script>
-	<script src="./javascript/idea.idealist.js" type="text/javascript"></script>
-	<script src="./javascript/idea.menubar.js" type="text/javascript"></script>
-	<script src="./javascript/idea.errordialog.js" type="text/javascript"></script>
-	<script src="./javascript/idea.deletedialog.js" type="text/javascript"></script>
-	<script src="./javascript/idea.ideadetails.js" type="text/javascript"></script>
-	<script src="./javascript/idea.editdialog.js" type="text/javascript"></script>
-	<script src="./javascript/idea.createdialog.js" type="text/javascript"></script>
-    <script src="./javascript/application.js" type="text/javascript"></script>
-  </head>
-  <body>
-    <div class ="wrapper">
-        <div class="header">
-            <h2>Internes Innovationsmanagement</h2>
-            <p> Hier haben Sie die Möglichkeit Ideen und Vorschläge in unser Unternehmen einzubringen. </p>
-            
-        </div>   
-        
-        <div id="menu_bar">
-            <a class="show_ideas" href="#">Alle Ideen</a>
-            <a class="create_idea" href="#">Neue Idee</a>
-            <div class ="current_userdiv">Eingeloggt als:<span class="current_user"></span></div>
-        </div>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Ideen-Liste</title>
+        <link rel="stylesheet" href="./css/jquery-ui-1.10.4.css" />
+        <link rel="stylesheet" href="./css/application.css" />
+        <script src="./javascript/jquery-1.10.2.js" type="text/javascript"></script>
+        <script src="./javascript/jquery.blockUI.js" type="text/javascript"></script>
+        <script src="./javascript/jquery.ui.datepicker-de.js" type="text/javascript"></script>
+        <script src="./javascript/jquery-ui-1.10.4.js" type="text/javascript"></script>
+        <script src="./javascript/idea.idealist.js" type="text/javascript"></script>
+        <script src="./javascript/idea.menubar.js" type="text/javascript"></script>
+        <script src="./javascript/idea.errordialog.js" type="text/javascript"></script>
+        <script src="./javascript/idea.deletedialog.js" type="text/javascript"></script>
+        <script src="./javascript/idea.ideadetails.js" type="text/javascript"></script>
+        <script src="./javascript/idea.editdialog.js" type="text/javascript"></script>
+        <script src="./javascript/idea.createdialog.js" type="text/javascript"></script>
+        <script src="./javascript/application.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class ="wrapper">
+            <div class="header">
+                <h2>Internes Innovationsmanagement</h2>
+                <p> Hier haben Sie die Möglichkeit Ideen und Vorschläge in unser Unternehmen einzubringen. </p>
 
-        <div class="content">  
-            <div id="idea_list">
-            <h3>Ideen-Liste</h3>
-                        <div class="idea template">
-                                <span>Wer?</span>
-                                <b><span class="author"></span></b>
-                                <span>|</span>
-                                <span>Wann?</span><br>
-                                <span class="updated"></span>
-                                <b><span class="title"></span></b><br>
-                                <span class="buttons">
-                                <a class="edit_idea" href="#">Bearbeiten</a>
-                                <a class="delete_idea" href="#">Löschen</a></span>
-                        </div>
+            </div>   
+
+            <div id="menu_bar">
+                <a class="show_ideas" href="#">Alle Ideen</a>
+                <a class="create_idea" href="#">Neue Idee</a>
+                <div class ="current_userdiv">Eingeloggt als: <span class="current_user"></span></div>
             </div>
-                <div id="error_dialog" title="Fehler">
-                        <div class="message"></div>
+
+            <div class="content">  
+
+                <div id="idea_list">
+                    <h3>Ideen-Liste</h3>
+                    <div class="idea template">
+                        <b><span class="title"></span></b><br>
+                        <span>Wer?</span>
+                        <b><span class="author"></span></b>
+                        <span>Wann?</span><br>
+                        <span>Aktzeptiert: </span><br>
+                        <b><span class="accepted_list"></span></b>
+                        <span>Kommentiert: </span><br>
+                        <b><span class="accepted_list"></span></b>
+                        <span class="updated"></span>
+                        <span class="buttons">
+                            <a class="edit_idea" href="#">Bearbeiten</a>
+                            <a class="delete_idea" href="#">Löschen</a></span>
+                    </div>
                 </div>
+
+                <div id="error_dialog" title="Fehler">
+                    <div class="message"></div>
+                </div>
+
                 <!--<div id="nothing_found" title="Fehler">
                 <p>Bisher wurden keine Ideen eingetragen!</p>
                 </div>--> 
+
+
+
                 <div id="delete_dialog" title="Idee löschen">
-                        <div class="delete">Möchten Sie die Idee wirklich löschen?</div>
+                    <div class="delete">Möchten Sie die Idee wirklich löschen?</div>
                 </div>
+
                 <div id="idea_details">
-                        <span>Wer?</span>
-                        <b><span class="author"></span></b>
-                        <span>|</span>
-                        <span>Wann?</span>
-                        <span class="updated"></span>
-                        <span class="title"></span>
-                        <span class="description"></span>
-            </div>
+                    <h3><span class="title"></span> </h3> 
+                    <div style="width:900px; margin:10px; height:500px;">
+                        <div class="idea_details_left">
+                            <b><span>Wer? </span></b> <span class="author"></span><br>
+                            <b><span>Wann?</span></b>  <span class="created"></span><br>
+                            <b><span>Update am:</span></b> <span class="updated"></span><br>
+                            <b><span>Kommentar:</span></b>  <span class="comment"></span><br> 
+                            <b><span>Idee Aktzeptiert: </span></b> <span class="accepted"></span> 
+                        </div>
+                        <div class="idea_details_right">
+                            <b><span>Inhalt:</span></b><br>
+                            <span class="description"></span><br>
+                        </div>
+                    </div>   
+                </div>
+
                 <div id="edit_dialog" title="Idee bearbeiten">
-                        <form>
-                                <table>
-                                        <tr>
-                                                <td/>
-                                                <td colspan="2"><span class="validation_message ui-state-error-text"></span></td>
-                                        </tr>
-                                        <tr>
-                                                <td>
-                                                        <label for="title_field">Titel</label>:
-                                                </td>
-                                                <td><input id="title_field" type="text"/></td>
-                                        </tr>
-                                        <tr>
-                                                <td><label for="description_field">Inhalt:</label></td>
-                                                <td colspan="2"><textarea id="description_field"></textarea></td>
-                                        </tr>
-                                </table>
-              </form>
-            </div>
-        </div>
-        <div class="footer">
-            <p><b>Web und Mobile Development 2016/2017</b></p>
-            <p><b>Studiengang:</b> BWI II</p>
-            <p><b>Dozent:</b> Herr Steffens</p> 
-            <p><b>Gruppe:</b> Kulhavy, Lemm, Wisskirchen, Seitz</p>  
-        </div>
-    </div>    
-  </body>
+                    <form>
+                        <table>
+                            <tr>
+                                <td/>
+                                <td colspan="2"><span class="validation_message ui-state-error-text"></span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="title_field">Titel</label>:
+                                </td>
+                                <td><input id="title_field" type="text"/></td>
+                            </tr>
+                            <tr>
+                                <td><label for="description_field">Inhalt:</label></td>
+                                <td colspan="2"><textarea id="description_field"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><label for="comment_field">Kommentar</label></td>
+                                <td colspan="2"><textarea id="description_field"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><label for="accepted_field">Aktzeptiert</label></td>
+                                <td colspan="2"><input type="checkbox" name="zutat" value="sardellen"></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+
+            </div> <!-- Content ende -->
+
+            <div class="footer">
+                <p><b>Web und Mobile Development 2016/2017</b></p>
+                <p><b>Studiengang:</b> BWI II</p>
+                <p><b>Dozent:</b> Herr Steffens</p> 
+                <p><b>Gruppe:</b> Kulhavy, Lemm, Wisskirchen, Seitz</p>  
+            </div> <!-- Footer ende -->
+        </div>  <!-- Wrapper ende -->   
+    </body>
 </html>

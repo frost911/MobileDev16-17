@@ -24,8 +24,13 @@ $.widget("idea.createDialog", $.ui.dialog,{
 		var save = this.options.buttons[0];
 		save.click = function(){
 			var idea = {
-				title: that.element.find("#title_field").val(),
-				description: that.element.find("#description_field").val()
+				title: that.element.find("#title_field").val(),  
+                                //author: that.element.find(".author").text(idea.author);
+                                //created: that.element.find(".created").text(idea.created);
+                                //updated: that.element.find(".updated").text(idea.updated);
+                                description: that.element.find("#description_field").val()
+                                //comment: that.element.find(".comment").text(idea.comment);
+                                //accepted: that.element.find(".accepted").text(idea.accepted);
 			};
 			$.ajax({
 				type: "POST",

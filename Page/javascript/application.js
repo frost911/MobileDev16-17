@@ -18,7 +18,7 @@ $(function() {
 	});
 	$("#idea_details").ideaDetails();
 	$("#error_dialog").errorDialog();
-	$("#edit_dialog").createDialog(); // ????????
+	$("#create_dialog").createDialog(); // ????????
 	$("#edit_dialog").editDialog({
 		onIdeaEdited: function(){
 			$("#idea_list").ideaList("reload");
@@ -52,7 +52,7 @@ $(function() {
 		},
 		onCreateIdeaClicked: function(){
 			$("#idea_details").hide();
-			$("#edit_dialog").createDialog("open");
+			$("#create_dialog").createDialog("open");
 		}
 	});
 });
