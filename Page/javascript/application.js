@@ -19,7 +19,11 @@ $(function() {
 	});
 	$("#idea_details").ideaDetails();
 	$("#error_dialog").errorDialog();
-	$("#create_dialog").createDialog(); // ????????
+	$("#create_dialog").createDialog({
+               onIdeaEdited: function(){
+			$("#idea_list").ideaList("reload");
+		}
+	});
 	$("#edit_dialog").editDialog({
 		onIdeaEdited: function(){
 			$("#idea_list").ideaList("reload");

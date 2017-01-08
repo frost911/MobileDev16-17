@@ -30,12 +30,6 @@ $.widget("idea.ideaList", {
                 idea.accepted = "Ja!";
             }
             ideaElement.find(".accepted").text(idea.accepted);
-            if (idea.comment === null || idea.comment == "") {
-                idea.comment = "Kein Kommentar Vorhanden!";
-            } else{
-                idea.comment = "Kommentar Vorhanden!";
-            }
-            ideaElement.find(".comment").text(idea.comment);
             ideaElement.click(idea.url, function (event) {
                 that._trigger("onIdeaClicked", null, event.data);
             });

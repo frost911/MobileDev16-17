@@ -13,9 +13,18 @@ $.widget("idea.editDialog", $.ui.dialog,{
 		width: 550
 	},
 	open: function(idea){
+                if(idea.accepted === "Ja!"){
+                    this.element.find("#accepted_field").prop("checked", true);
+                }
+                else
+                {
+                    this.element.find("#accepted_field").prop("checked", false);
+                }
+                console.log(idea);
 		this._idea = idea;
 		this.element.find("#title_field").val(idea.title);
 		this.element.find("#description_field").val(idea.description);
+                this.element.find("#comment_field").val(idea.comment);
 		this.element.find(".validation_message").empty();
 		this.element.find("#title_field").removeClass("ui-state-error");
 		this._super();
@@ -23,7 +32,6 @@ $.widget("idea.editDialog", $.ui.dialog,{
 	_create: function(){
 		var that = this;
 		var ok = this.options.buttons[0];
-                //console.log($('#accepted_field'));
 		ok.click = function(){
 			var idea = {
 				title: that.element.find("#title_field").val(),
