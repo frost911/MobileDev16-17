@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 06. Jan 2017 um 15:51
+-- Erstellungszeit: 09. Jan 2017 um 23:01
 -- Server-Version: 10.1.19-MariaDB
 -- PHP-Version: 5.6.28
 
@@ -28,13 +28,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `idea` (
   `ID` int(11) NOT NULL,
-  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `author` varchar(60) NOT NULL,
   `title` varchar(80) NOT NULL,
   `description` text NOT NULL,
-  `acceptet` tinyint(1) DEFAULT NULL,
   `comment` text,
+  `accepted` tinyint(1) DEFAULT NULL,
   `version` decimal(10,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -42,8 +42,10 @@ CREATE TABLE `idea` (
 -- Daten für Tabelle `idea`
 --
 
-INSERT INTO `idea` (`ID`, `created_date`, `updated`, `author`, `title`, `description`, `acceptet`, `comment`, `version`) VALUES
-(1, '2017-01-06 14:39:43', NULL, 'Thomas', 'Test', 'Test', NULL, NULL, '1');
+INSERT INTO `idea` (`ID`, `created`, `updated`, `author`, `title`, `description`, `comment`, `accepted`, `version`) VALUES
+(2, '2017-01-06 20:48:35', '2017-01-09 21:59:33', 'Thomas', 'Test', 'TestTestTestTestTestl', 'adgasg', 1, '64'),
+(6, '2017-01-09 20:02:28', '2017-01-09 20:03:09', 'Thomas', 'Mehr Kaffee', 'Kaffee ist ein schwarzes, psychotropes, koffeinhaltiges Heißgetränk, das aus gerösteten und gemahlenen Kaffeebohnen, den Samen aus den Früchten der Kaffeepflanze, und heißem Wasser hergestellt wird.', '', 0, '2'),
+(8, '2017-01-09 22:00:17', NULL, 'Thomas', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', NULL, NULL, '1');
 
 --
 -- Indizes der exportierten Tabellen
@@ -63,7 +65,7 @@ ALTER TABLE `idea`
 -- AUTO_INCREMENT für Tabelle `idea`
 --
 ALTER TABLE `idea`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
