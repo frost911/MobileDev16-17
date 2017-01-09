@@ -12,29 +12,26 @@ $.widget("idea.createDialog", $.ui.dialog,{
 		],
 		width: 550
 	},
-	open: function(){		
-		this.element.find("#title_field").val("2");
-		this.element.find("#description_field").val("1");
+	open: function(){	
+		this.element.find("#title_field").empty();
+		this.element.find("#description_field").empty();
 		this.element.find(".validation_message").empty();
 		this.element.find("#title_field").removeClass("ui-state-error");
 		this._super();
 	},
-	_create: function(){
+	_create: function(idea){
 		var that = this;
 		var save = this.options.buttons[0];
 		save.click = function(){
 			var idea = {
 				title: that.element.find("#title_field").val(),  
-                                //author: that.element.find(".author").text(idea.author);
-                                //created: that.element.find(".created").text(idea.created);
-                                //updated: that.element.find(".updated").text(idea.updated);
-                                description: that.element.find("#description_field").val()
-                                //comment: that.element.find(".comment").text(idea.comment);
-                                //accepted: that.element.find(".accepted").text(idea.accepted);
+                                description: that.element.find("#description_field").val(),
+                                url: "../WebService/RequestHandler.php?command=CreateIdeaCommand"
 			};
+                        console.log(idea); // Debugging
 			$.ajax({
 				type: "POST",
-				url: that._idea.url,
+				url: idea.url,
 				data: idea,
 				success: function(){
 					that.close();
@@ -47,8 +44,7 @@ $.widget("idea.createDialog", $.ui.dialog,{
 						var validationMessages = $.parseJSON(response.responseText);
 						that.element.find(".validation_message").text(validationMessages.title);
 						that.element.find("#title_field").addClass("ui-state-error").focus();
-					}
-					//Verschiedene Status und Felder abfragen
+                                        ;}
 				}
 			});
 			

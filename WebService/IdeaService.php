@@ -78,6 +78,7 @@ class IdeaService {
 
     function createIdea($idea) {
         $result = new CreateIdeaResult();
+        $idea->author = $_SERVER['PHP_AUTH_USER'];
         if ($idea->title === '') {
             $result->validation_messages["title"] = "Der Titel ist eine Pflichtangabe. Bitte geben Sie einen Titel an.";
         }
@@ -88,6 +89,7 @@ class IdeaService {
         }
         $statement = "INSERT INTO idea SET " .
                 "title = '$idea->title', " .
+                "author = '$idea->author', ".
                 "version = 1, " .
                 "description = '$idea->description'";
         @$link = new mysqli("localhost", "root", "", "idealist");
@@ -97,7 +99,7 @@ class IdeaService {
         }
         $link->set_charset("utf8");
         $ret = $link->query($statement);
-
+        var_dump($ret);die;
         if ($ret === FALSE) {
             $link->close();
             $result->status_code = IdeaService::DATABASE_ERROR;

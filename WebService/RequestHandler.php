@@ -20,6 +20,7 @@ class RequestHandler {
                 header("HTTP/1.1 400");
                 $validation_messages = array();
                 $validation_messages["title"] = "Der Titel ist eine Pflichtangabe. Bitte geben Sie einen Titel an.";
+                $validation_messages["description"] = "Der Inhalt ist eine Pflichtangabe. Bitte geben Sie einen Inhalt an.";
                 echo json_encode($validation_messages);
                 return;
             }

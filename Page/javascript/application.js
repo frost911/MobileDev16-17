@@ -20,7 +20,7 @@ $(function() {
 	$("#idea_details").ideaDetails();
 	$("#error_dialog").errorDialog();
 	$("#create_dialog").createDialog({
-               onIdeaEdited: function(){
+               onIdeaCreated: function(){
 			$("#idea_list").ideaList("reload");
 		}
 	});

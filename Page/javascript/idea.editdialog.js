@@ -20,7 +20,7 @@ $.widget("idea.editDialog", $.ui.dialog,{
                 {
                     this.element.find("#accepted_field").prop("checked", false);
                 }
-                console.log(idea);
+                //console.log(idea); // Debugging
 		this._idea = idea;
 		this.element.find("#title_field").val(idea.title);
 		this.element.find("#description_field").val(idea.description);
@@ -39,7 +39,7 @@ $.widget("idea.editDialog", $.ui.dialog,{
                                 comment: that.element.find("#comment_field").val(),
                                 accepted: document.getElementById("accepted_field").checked  
 			};
-                        console.log(idea);
+                        //console.log(idea); // Debugging
 			$.ajax({
 				type: "PUT",
 				url: that._idea.url,

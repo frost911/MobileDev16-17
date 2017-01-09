@@ -115,3 +115,17 @@ margin: 0 0 0 0;
     text-decoration: none;
     display: block;
 }
+
+#comment_field{
+    width: 400px;
+    height: 100px; 
+}
+
+#title_field{
+    width: 400px;
+}
+
+#description_field{
+    width: 400px;
+    height: 100px; 
+}
