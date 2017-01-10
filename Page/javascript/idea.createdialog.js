@@ -40,11 +40,11 @@ $.widget("idea.createDialog", $.ui.dialog,{
 				error: function(response){
 					that.element.find(".validation_message").empty();
 					that.element.find("#title_field").removeClass("ui-state-error");
-					if(response.status == 400 || response.status == 500){
+					if(response.status == 400){
 						var validationMessages = $.parseJSON(response.responseText);
 						that.element.find(".validation_message").text(validationMessages.title);
 						that.element.find("#title_field").addClass("ui-state-error").focus();
-                                        ;}
+					}
 				}
 			});
 			

@@ -5,7 +5,7 @@ $(function() {
 		}
 		$("#error_dialog").errorDialog("open", response.statusText);
 		$("#idea_details").hide();
-                $("#idea template").hide();
+        $("#idea template").hide();
 		$("#idea_list").show();
 		if(response.status == 404){
 			$("#idea_list").ideaList("reload");

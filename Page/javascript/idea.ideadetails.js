@@ -18,7 +18,7 @@ $.widget("idea.ideaDetails",{
                         if(idea.accepted === null || idea.accepted === false || idea.accepted === 0 || idea.accepted === "0" ){
                             idea.accepted = "Nein!";   
                         }
-                        if(idea.accepted === true){
+                        if(idea.accepted === true || idea.accepted == 1){
                             idea.accepted = "Ja!";   
                         }                        
 			this.element.find(".title").text(idea.title);
