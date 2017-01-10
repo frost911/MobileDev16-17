@@ -145,6 +145,16 @@ class IdeaService {
         $ideas = $this->callDatabase($statement);     
         return $ideas;
     }
+    
+    function getUser() {
+        $user = $_SERVER['PHP_AUTH_USER'];
+        return $user;
+    }
+    //$getUser = new GetUserCommand();
+    //$user = $getUser->getUser();
+    //$userArr = array("User" => $user);
+    //$jsonstring = json_encode($userArr);
+    //echo $jsonstring;
 
     function callDatabase($statement) {
         $getLink = new GetLink();
@@ -168,8 +178,7 @@ class IdeaService {
             //error
         }
         return $result;
-    }
-
+    }  
 }
 
 ?>

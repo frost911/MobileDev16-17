@@ -10,6 +10,12 @@ RewriteCond %{REQUEST_METHOD} GET
 RewriteRule ^ideas$ RequestHandler.php?command=GetIdeasCommand
 
 RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^ideas$ RequestHandler.php?command=GetUserCommand
+
+RewriteCond %{REQUEST_METHOD} GET
+RewriteRule ^ideas$ RequestHandler.php?command=GetIdeaCountCommand
+
+RewriteCond %{REQUEST_METHOD} GET
 RewriteRule ^ideas/(.+)$ RequestHandler.php?command=GetIdeaCommand&id=$1
 
 RewriteCond %{REQUEST_METHOD} POST
