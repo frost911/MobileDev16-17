@@ -25,7 +25,8 @@ class IdeaService {
                 "version = version + 1 " .
                 "WHERE id = $idea->id AND version = $idea->version";
         //var_dump($statement); die; //Debugging
-        @$link = new mysqli("localhost", "root", "", "idealist");
+        $getLink = new GetLink();
+        $link = $getLink->link();
         if ($link->connect_error !== NULL) {
             $result->status_code = IdeaService::DATABASE_ERROR;
             return $result;
@@ -59,7 +60,8 @@ class IdeaService {
     function deleteIdea($id) {
         $result = new CreateIdeaResult();
         $statement = "DELETE FROM idea WHERE id = $id";
-        @$link = new mysqli("localhost", "root", "", "idealist");
+        $getLink = new GetLink();
+        $link = $getLink->link();
         if ($link->connect_error !== NULL) {
             $result->status_code = IdeaService::DATABASE_ERROR;
             return $result;
@@ -91,14 +93,15 @@ class IdeaService {
                 "author = '$idea->author', ".
                 "version = 1, " .
                 "description = '$idea->description'";
-        @$link = new mysqli("localhost", "root", "", "idealist");
+        $getLink = new GetLink();
+        $link = $getLink->link();
         if ($link->connect_error !== NULL) {
             $result->status_code = IdeaService::DATABASE_ERROR;
             return $result;
         }
         $link->set_charset("utf8");
         $ret = $link->query($statement);
-        var_dump($ret);die;
+        //var_dump($ret);die; //Debugging
         if ($ret === FALSE) {
             $link->close();
             $result->status_code = IdeaService::DATABASE_ERROR;
@@ -121,7 +124,20 @@ class IdeaService {
         }
         return $idea[0];
     }
-
+    
+    function getIdeasCount() {
+        $getLink = new GetLink();
+        $link = $getLink->link();
+        if ($link->connect_error !== NULL) {
+            return IdeaService::DATABASE_ERROR;
+        }
+        $statement = "SELECT id FROM idea ";
+        $link->set_charset("utf8"); 
+        $result = $link->query($statement); 
+        $count = $result->num_rows;
+        return $count;
+    }
+   
     function getIdeas() {
         $statement = "SELECT id,   " .
                 "author, created, updated, title, description, comment, accepted, version " .
@@ -131,7 +147,8 @@ class IdeaService {
     }
 
     function callDatabase($statement) {
-        @$link = new mysqli("localhost", "root", "", "idealist");
+        $getLink = new GetLink();
+        $link = $getLink->link();
         if ($link->connect_error !== NULL) {
             return IdeaService::DATABASE_ERROR;
         }

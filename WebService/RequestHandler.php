@@ -8,6 +8,7 @@ require "CreateIdeaCommand.php";
 require "CreateIdeaResult.php";
 require "DeleteIdeaCommand.php";
 require "UpdateIdeaCommand.php";
+require "GetLink.php";
 
 class RequestHandler {
 

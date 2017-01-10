@@ -6,15 +6,15 @@
             <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/css/application.css</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/index.html</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/javascript/idea.ideadetails.js</file>
-            <file>file:/C:/xampp/htdocs/MobileDev16-17/WebService/UpdateIdeaCommand.php</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/WebService/Idea.php</file>
+            <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/javascript/idea.menubar.js</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/javascript/idea.createdialog.js</file>
-            <file>file:/C:/xampp/htdocs/MobileDev16-17/WebService/DeleteIdeaCommand.php</file>
+            <file>file:/C:/xampp/htdocs/MobileDev16-17/WebService/GetUser.php</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/javascript/idea.idealist.js</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/WebService/IdeaService.php</file>
-            <file>file:/C:/xampp/htdocs/MobileDev16-17/WebService/GetIdeaCommand.php</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/javascript/application.js</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/javascript/idea.editdialog.js</file>
+            <file>file:/C:/xampp/htdocs/MobileDev16-17/WebService/.htusers</file>
         </group>
     </open-files>
 </project-private>
