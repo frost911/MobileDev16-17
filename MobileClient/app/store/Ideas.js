@@ -11,7 +11,7 @@ Ext.define('Idealist.store.Ideas', {
 			url: '/MobileDev16-17/WebService/ideas',
 			listeners: {
 				exception: function(proxy, response){
-					Ext.Msg.alert('Fehler' + response.status,response.statusText);
+					Ext.Msg.alert('Fehler ' + response.status,response.statusText);
 				}
 			},
 			reader: {

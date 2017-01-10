@@ -30,6 +30,12 @@ Ext.define('Idealist.view.IdeaForm', {
 				name: 'description',
 				label: 'Beschreibung',
 				readOnly: true
+			},
+			{
+				xtype: 'textareafield',
+				name: 'comment',
+				label: 'Kommentar',
+				readOnly: true
 			}
 		]
 	}
