@@ -138,10 +138,12 @@ class IdeaService {
         return $count;
     }
    
-    function getIdeas() {
+    function getIdeas($offset) {
+       
         $statement = "SELECT id,   " .
                 "author, created, updated, title, description, comment, accepted, version " .
-                "FROM idea ";
+                "FROM idea ".
+                "LIMIT ".$offset.", 10";
         $ideas = $this->callDatabase($statement);     
         return $ideas;
     }
@@ -150,11 +152,6 @@ class IdeaService {
         $user = $_SERVER['PHP_AUTH_USER'];
         return $user;
     }
-    //$getUser = new GetUserCommand();
-    //$user = $getUser->getUser();
-    //$userArr = array("User" => $user);
-    //$jsonstring = json_encode($userArr);
-    //echo $jsonstring;
 
     function callDatabase($statement) {
         $getLink = new GetLink();

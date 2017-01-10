@@ -1,24 +1,23 @@
-$.widget("idea.ideaList", {
-    _create: function () {
+$.widget("idea.pagination", {
+    _appendIdeas: function () {
+        //get count from GetIdeaCountCommand.php
+        var count = 0;
         $.ajax({
-            url: "/MobileDev16-17/WebService/ideas",
-            dataType: "json",
-            success: this._appendIdeas,
-            context: this
+            type: 'GET',
+            url: "../Webservice/RequestHandler.php?command=GetIdeaCountCommand",
+            dataType: "int",
+            success: function (data) {
+               count = data; 
+               console.log(data);
+            } 
         });
-    },
-    reload: function () {
-        this.element.find(".idea:not(.template)").remove();
-        $.ajax({
-            url: "/MobileDev16-17/WebService/ideas",
-            dataType: "json",
-            success: this._appendIdeas,
-            context: this
-        });
-    },
-    _appendIdeas: function (ideas) {
-        var that = this;
-        for (var i = 0; i < ideas.length; i++) {
+        console.log(count);
+        //get current page from ??? application.js??
+        //count / 10 = pages
+        //replace pagination_link with href, pagination_link_number with page number
+
+       /* var that = this;
+        for (var i = 0; i < count; i++) {
             var idea = ideas[i];
             var ideaElement = this.element.find(".template").clone().toggleClass('template idea');
             ideaElement.find(".title").text(idea.title);
@@ -42,6 +41,6 @@ $.widget("idea.ideaList", {
                 return false;
             });
             this.element.append(ideaElement);
-        }
+        } */
     }
 });

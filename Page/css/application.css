@@ -129,3 +129,27 @@ margin: 0 0 0 0;
     width: 400px;
     height: 100px; 
 }
+
+.pagination_div{
+   margin-top: 500px;   /*todo*/
+}
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+}

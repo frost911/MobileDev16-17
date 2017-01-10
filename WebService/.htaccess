@@ -7,7 +7,7 @@
 RewriteEngine on
 
 RewriteCond %{REQUEST_METHOD} GET
-RewriteRule ^ideas$ RequestHandler.php?command=GetIdeasCommand
+RewriteRule ^ideas$ RequestHandler.php?command=GetIdeasCommand&page=$1
 
 RewriteCond %{REQUEST_METHOD} GET
 RewriteRule ^ideas$ RequestHandler.php?command=GetUserCommand
