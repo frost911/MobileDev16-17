@@ -13,7 +13,6 @@ class IdeaService {
         if ($idea->title === '') {
             $result->validation_messages["title"] = "Der Titel ist eine Pflichtangabe. Bitte geben Sie einen Titel an.";
         }
-        //felder überprüfen
         if (count($result->validation_messages) !== 0) {
             $result->status_code = IdeaService::INVALID_INPUT;
             return $result;
