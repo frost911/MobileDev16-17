@@ -22,8 +22,7 @@
     <body>
         <div class ="wrapper">
             <div class="header">
-                <h2>Internes Innovationsmanagement</h2>
-                <p>Sie haben auf dieser Seite die Möglichkeit Ideen und Vorschläge in unser Unternehmen einzubringen. </p>
+                <img border="0" alt="Innovationsmanagement" src="./css/images/banner.jpg" >
             </div>   
 
             <div id="menu_bar">
@@ -35,27 +34,25 @@
             <div class="content">  
                 <div id="idea_list">
                     <div class="template">
-                        <h3><span class="title"></span></h3><br>
-                        <span>Wer?</span>
-                        <b><span class="author"></span></b>
-                        <span>Wann?</span>
-                        <b><span class="created"></span></b><br>
-                        <span>Akzeptiert: </span>
-                        <b><span class="accepted"></span></b>
-                        <span class="updated"></span>
-                        <span class="buttons">
-                            <a class="edit_idea" href="#">Bearbeiten</a>
-                            <a class="delete_idea" href="#">Löschen</a></span>
+                        <div class="idea_wrapper">
+                            <div class="idea_content">
+                                <h3><span class="title"></span></h3><br>
+                                <span>Wer?</span>
+                                <b><span class="author"></span></b>
+                                <span>Wann?</span>
+                                <b><span class="created"></span></b>
+                                <span>Akzeptiert: </span>
+                                <b><span class="accepted"></span></b>
+                                <span class="updated"></span>
+                            </div>
+                            <div class="buttons_div">
+                                    <a class="edit_idea" href="#"><img border="0" alt="Bearbeiten" src="./css/images/pencil.png" width="50" height="50"></a>
+                                    <a class="delete_idea" href="#"><img border="0" alt="Löschen" src="./css/images/cross.png" width="50" height="50"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="pagination_div">
-                    <ul class="pagination">
-                        <li><a class="pagination_link" href="#"><span class="pagination_link_number"></span></a></li>
-                        <li><a class="pagination_link_active" href="#"></a></li>
-                    </ul>
-                </div>  
-                
+
                 <div id="error_dialog" title="Fehler">
                     <div class="message"></div>
                 </div>
@@ -64,28 +61,46 @@
                 <p>Bisher wurden keine Ideen eingetragen!</p>
                 </div>--> 
 
-
-
                 <div id="delete_dialog" title="Idee löschen">
                     <div class="delete">Möchten Sie die Idee wirklich löschen?</div>
                 </div>
 
                 <div id="idea_details">
-                    <h3><span class="title"></span> </h3> 
-                    <div style="width:900px; margin:10px; height:500px;">
-                        <div class="idea_details_left">
-                            <b><span>Wer? </span></b> <span class="author"></span><br>
-                            <b><span>Wann?</span></b> <br> <span class="created"></span><br>
-                            <b><span>Update am:</span></b><br> <span class="updated"></span><br>
-                            <b><span>Idee Akzeptiert: </span></b> <span class="accepted"></span> 
-                        </div>
-                        <div class="idea_details_right">
-                            <b><span>Inhalt:</span></b><br>
-                            <span class="description"></span><br>
-                            <b><span>Kommentar:</span></b><br>
-                            <span class="comment"></span><br> 
-                        </div>
-                    </div>   
+                    <h2 class="table_header"><span class="title"></span> </h2> 
+
+                    <table class="details_table">
+                        <tr class="row_even">
+                            <th>Autor:</th>
+                            <td class="author"></td>
+                        </tr>
+                        <tr class="row_odd">
+                            <th>Erstellt am:</th>
+                            <td class="created"></td>
+                        </tr>
+                        <tr class="row_even">
+                            <th>Update am:</th>
+                            <td class="updated"></td>
+                        </tr>
+                       <tr class="row_odd">
+                            <th>Idee Akzeptiert:</th>
+                            <td class="accepted"></td>
+                        </tr>
+                        <tr class="row_even">
+                            <th>Inhalt:</th>
+                            <td class="description"></td>
+                        </tr>
+                        <tr class="row_odd">
+                            <th>Kommentar:</th>
+                            <td class="comment"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="pagination_div">
+                    <ul class="pagination">
+                        <li><a class="pagination_link" href="#"><span class="pagination_link_number"></span></a></li>
+                        <li><a class="pagination_link_active" href="#"></a></li>
+                    </ul>
                 </div>
 
                 <div id="edit_dialog" title="Idee bearbeiten">
@@ -115,7 +130,7 @@
                         </table>
                     </form>
                 </div>
-                
+
                 <div id="create_dialog" title="Idee erstellen">
                     <form>
                         <table>
@@ -135,7 +150,6 @@
                         </table>
                     </form>
                 </div>
-                
 
             </div> <!-- Content ende -->
 
