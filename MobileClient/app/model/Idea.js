@@ -8,6 +8,7 @@ Ext.define('Idealist.model.Idea', {
 				name: 'updated',
 				type: 'date'
 			},
+			'accepted',
 			'description',
 			'comment'
 			],

@@ -28,7 +28,7 @@ Ext.define('Idealist.view.IdeaForm', {
 			{
 				xtype: 'textareafield',
 				name: 'description',
-				label: 'Beschreibung',
+				label: 'Inhalt',
 				readOnly: true
 			},
 			{
