@@ -30,6 +30,13 @@ $(function() {
 			$("#idea_list").ideaList("reload");
 		}
 	});
+        $("#pagination_links").pagination({  //todo
+               onLinkClicked: function(event, page){
+			$("#pagination_links").pagination(event, page);
+                        $("#pagination_links").pagination("reload");
+		} 
+            
+        });
 	$("#delete_dialog").deleteDialog({
 		onIdeaDeleted: function(){
 			$("#idea_details").hide();
