@@ -138,12 +138,11 @@ class IdeaService {
         return $count;
     }
    
-    function getIdeas($offset) {
+    function getIdeas() {
        
         $statement = "SELECT id,   " .
                 "author, created, updated, title, description, comment, accepted, version " .
-                "FROM idea ".
-                "LIMIT ".$offset.", 10";
+                "FROM idea ";
         $ideas = $this->callDatabase($statement);     
         return $ideas;
     }

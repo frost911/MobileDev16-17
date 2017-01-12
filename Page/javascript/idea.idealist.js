@@ -18,13 +18,14 @@ $.widget("idea.ideaList", {
     },
     _appendIdeas: function (ideas) {
         var that = this;
+
         for (var i = 0; i < ideas.length; i++) {
             var idea = ideas[i];
             var ideaElement = this.element.find(".template").clone().toggleClass('template idea');
             ideaElement.find(".title").text(idea.title);
             ideaElement.find(".author").text(idea.author);
             ideaElement.find(".created").text(idea.created);
-            if (idea.accepted === null || idea.accepted === "0" || idea.accepted === 0|| idea.accepted === false) {
+            if (idea.accepted === null || idea.accepted === "0" || idea.accepted === 0 || idea.accepted === false) {
                 idea.accepted = "Nein!";
             } else {
                 idea.accepted = "Ja!";
