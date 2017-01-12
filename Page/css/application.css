@@ -65,11 +65,21 @@ html, body {
     float: left;
 }
 .current_userdiv{
-    margin-left: 80%;
+
+    width: 13%;
     font: bold 16px Verdana;
     padding: 5px 6px 2px 6px;
     border-left: 1px solid #333333;
     margin-top: 6px;
+    float: right;
+}
+.idea_countdiv{
+    width: 10%;
+    font: bold 16px Verdana;
+    padding: 5px 6px 2px 6px;
+    border-left: 1px solid #333333;
+    margin-top: 6px;
+    float: right;
 }
 
 .content {
@@ -115,8 +125,6 @@ html, body {
     padding: 8px 0;
     display: block;
 }
-
-
 
 .details_table th {
     text-align: left;

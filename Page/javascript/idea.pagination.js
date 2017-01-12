@@ -1,5 +1,5 @@
 $.widget("idea.pagination", {
-    _appendIdeas: function () {
+    _giveCount: function () {
         //get count from GetIdeaCountCommand.php
         var count = 0;
         $.ajax({

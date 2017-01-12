@@ -11,7 +11,7 @@ $.widget("idea.menuBar", {
                 //console.log(data); //Debug
             },
             error: function () {
-                $(".current_user").text("Unbekannt");
+                $(".current_user").hide();
             }
         });
         this.element.find(".show_ideas").click(
@@ -26,5 +26,16 @@ $.widget("idea.menuBar", {
                     return false;
                 }
         );
+        $.ajax({
+            type: 'GET',
+            url: "../Webservice/RequestHandler.php?command=GetIdeaCountCommand",
+            dataType: "json",
+            success: function (data) {
+               $(".idea_count").text(data);
+            },
+            error: function () {
+                $(".idea_count").hide();
+            }
+        });
     }
 });

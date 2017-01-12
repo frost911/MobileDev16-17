@@ -19,7 +19,6 @@ class GetIdeaCommand {
         unset($idea->version);
         return $idea;
     }
-
 }
 
 ?>

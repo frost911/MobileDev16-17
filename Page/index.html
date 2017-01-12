@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="./css/application.css" />
         <script src="./javascript/jquery-1.10.2.js" type="text/javascript"></script>
         <script src="./javascript/jquery.blockUI.js" type="text/javascript"></script>
-        <script src="./javascript/jquery.ui.datepicker-de.js" type="text/javascript"></script>
         <script src="./javascript/jquery-ui-1.10.4.js" type="text/javascript"></script>
         <script src="./javascript/idea.idealist.js" type="text/javascript"></script>
         <script src="./javascript/idea.menubar.js" type="text/javascript"></script>
@@ -29,6 +28,7 @@
                 <a class="show_ideas" href="#">Alle Ideen</a>
                 <a class="create_idea" href="#">Neue Idee</a>
                 <div class ="current_userdiv">Eingeloggt als: <span class="current_user"></span></div>
+                <div class ="idea_countdiv">Ideenzähler: <span class="idea_count"></span></div> 
             </div>
 
             <div class="content">  
@@ -46,8 +46,8 @@
                                 <span class="updated"></span>
                             </div>
                             <div class="buttons_div">
-                                    <a class="edit_idea" href="#"><img border="0" alt="Bearbeiten" src="./css/images/pencil.png" width="50" height="50"></a>
-                                    <a class="delete_idea" href="#"><img border="0" alt="Löschen" src="./css/images/cross.png" width="50" height="50"></a>
+                                    <a class="edit_idea" href="#"><img border="0" alt="Bearbeiten" src="./css/images/pencil.png" width="45" height="45"></a>
+                                    <a class="delete_idea" href="#"><img border="0" alt="Löschen" src="./css/images/cross.png" width="45" height="45"></a>
                             </div>
                         </div>
                     </div>
@@ -78,18 +78,22 @@
                             <td class="created"></td>
                         </tr>
                         <tr class="row_even">
+                            <th>Alter:</th>
+                            <td class="age"></td>
+                        </tr>
+                        <tr class="row_odd">
                             <th>Update am:</th>
                             <td class="updated"></td>
                         </tr>
-                       <tr class="row_odd">
+                       <tr class="row_even">
                             <th>Idee Akzeptiert:</th>
                             <td class="accepted"></td>
                         </tr>
-                        <tr class="row_even">
+                        <tr class="row_odd">
                             <th>Inhalt:</th>
                             <td class="description"></td>
                         </tr>
-                        <tr class="row_odd">
+                        <tr class="row_even">
                             <th>Kommentar:</th>
                             <td class="comment"></td>
                         </tr>
