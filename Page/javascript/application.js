@@ -60,5 +60,5 @@ $(function() {
 			$("#create_dialog").createDialog("open");
 		}
 	});
-        $("#page_navigation").pagination();   
+    $("#page_navigation").pagination();
 });

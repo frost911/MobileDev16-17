@@ -32,6 +32,7 @@ $.widget("idea.menuBar", {
             dataType: "json",
             success: function (data) {
                $(".idea_count").text(data);
+			   $("#page_navigation").pagination("load", data);
             },
             error: function () {
                 $(".idea_count").hide();
