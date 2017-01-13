@@ -24,14 +24,14 @@ $.widget("idea.pagination", {
     previous: function () {
         var new_page = parseInt($("#current_page").val()) - 1;
         //if there is a page smaller then the current one 
-        if ($(".active").prev(".page_link").length === true) {
+        if ($(".active").prev(".page_link").length === 1) {
             this.go_to_page(new_page);
         }
     },
     next: function () {
         var new_page = parseInt($("#current_page").val()) + 1;
         //if there is an item after the current active link run the function  
-        if ($(".active").next(".page_link").length === true) {
+        if ($(".active").next(".page_link").length === 1) {
             this.go_to_page(new_page);
         }
     },
