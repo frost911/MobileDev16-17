@@ -33,6 +33,7 @@ $.widget("idea.menuBar", {
             success: function (data) {
                $(".idea_count").text(data);
 			   $("#page_navigation").pagination("load", data);
+			   return false;
             },
             error: function () {
                 $(".idea_count").hide();
