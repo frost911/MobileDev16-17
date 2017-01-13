@@ -7,15 +7,16 @@
             <file>file:/C:/xampp/htdocs/MobileDev16-17/WebService/.htaccess</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/index.html</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/javascript/idea.ideadetails.js</file>
+            <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/javascript/idea.errordialog.js</file>
+            <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/javascript/idea.deletedialog.js</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/javascript/idea.createdialog.js</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/javascript/idea.pagination.js</file>
-            <file>file:/C:/xampp/htdocs/MobileDev16-17/WebService/IdeaService.php</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/WebService/GetIdeaCountCommand.php</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/WebService/GetIdeasCommand.php</file>
-            <file>file:/C:/xampp/htdocs/MobileDev16-17/WebService/RequestHandler.php</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/javascript/idea.menubar.js</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/javascript/idea.idealist.js</file>
             <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/javascript/application.js</file>
+            <file>file:/C:/xampp/htdocs/MobileDev16-17/Page/javascript/idea.editdialog.js</file>
         </group>
     </open-files>
 </project-private>

@@ -139,11 +139,11 @@ class IdeaService {
     }
    
     function getIdeas() {
-       
         $statement = "SELECT id,   " .
                 "author, created, updated, title, description, comment, accepted, version " .
                 "FROM idea ";
         $ideas = $this->callDatabase($statement);     
+
         return $ideas;
     }
     

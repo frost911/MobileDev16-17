@@ -6,7 +6,7 @@ html, body {
     margin:0; 
     padding:0; 
     height:100%;
-    font: 14px Verdana;
+    font: 12px Verdana;
 }
 
 .wrapper{
@@ -25,10 +25,9 @@ html, body {
 }
 
 #menu_bar {
-    padding-left: 20px;
-    padding-right: 20px;
     height: 35px;
-    width: 100%;
+    width: 99%;
+    padding-left: 1%;
     background-color: #2196F3;
     border-bottom:2px solid;
 }
@@ -65,20 +64,21 @@ html, body {
     float: left;
 }
 .current_userdiv{
-    width: 13%;
-    font: bold 16px Verdana;
+    width: auto;
+    margin-left: 70%;
+    font: bold 14px Verdana;
     padding: 5px 6px 2px 6px;
     border-left: 1px solid #333333;
     margin-top: 6px;
-    float: right;
+    float: left;
 }
 .idea_countdiv{
-    width: 10%;
-    font: bold 16px Verdana;
+    width: auto;
+    font: bold 14px Verdana;
     padding: 5px 6px 2px 6px;
     border-left: 1px solid #333333;
     margin-top: 6px;
-    float: right;
+    float: left;
 }
 
 .content {
@@ -140,31 +140,31 @@ html, body {
 }
 
 .idea_wrapper{
-    margin-bottom: 5px;
-    margin-top: 5px;
-    padding: 8px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    padding: 5px;
     cursor: pointer;
     border: 1px solid;
     background-color: #BBDEFB;
     text-decoration: none;
     display: block;
     width: 50%;
-    height: 45px;
+    height: 38px;
     margin-left: 22%;
     margin-right: 22%;
     float:left;
 }
 .idea_wrapper:hover{
-    margin-bottom: 5px;
-    margin-top: 5px;
-    padding: 8px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    padding: 5px;
     cursor: pointer;
-    border: 1px solid;
+    border: 2px solid;
     background-color: #90CAF9;
     text-decoration: none;
     display: block;
     width: 50%;
-    height: 45px;
+    height: 38px;
     margin-left: 22%;
     margin-right: 22%;
     float:left;
@@ -186,10 +186,10 @@ html, body {
     padding-left: 20px;
     padding-right: 20px;
     background-color: #2196F3;
-    height:100px;
+    height:120px;
 }
 
-h2,h3{   
+h2,h3,h4{   
     margin: 0 0 0 0;    
 }
 
