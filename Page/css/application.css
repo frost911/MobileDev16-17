@@ -85,6 +85,7 @@ html, body {
     padding: 5px 20px 5px 20px;
     min-height: 60%;
     max-height: 90%;
+    width: 100%;
     background-color: white;
 }
 
@@ -207,26 +208,31 @@ h2,h3,h4{
     height: 100px; 
 }
 
-.pagination_div{
-    margin-top: 500px;   /*todo*/
-}
-
-ul.pagination {
+#page_navigation {
     display: inline-block;
     padding: 0;
-    margin: 0;
+    margin-left:35%;
+    margin-right:35%;
+    margin-top:90%;
+    margin-top:5px;
+    
 }
 
-ul.pagination li {display: inline;}
+#page_navigation a{display: inline;}
 
-ul.pagination li a {
+#page_navigation a {
     color: black;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
 }
 
-ul.pagination li a.active {
-    background-color: #4CAF50;
-    color: white;
+#page_navigation page_link active{
+    font-weight: bold;
+    font-size:12px;    
+}
+
+a.page_link active{
+    font-weight: bold;
+    font-size:12px;    
 }
