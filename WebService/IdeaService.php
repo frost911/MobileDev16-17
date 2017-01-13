@@ -144,6 +144,67 @@ class IdeaService {
                 "FROM idea ";
         $ideas = $this->callDatabase($statement);     
 
+        //Sortierfunktion, erst nach updated dann nach created
+        function sortme($a, $b){
+             $up1 = $a->updated;
+             $cr1 = $a->created;
+             
+             $up2 = $b->updated;
+             $cr2 = $b->created;
+             
+             //if up1 biggest
+             if($up1 > $cr2 && $up1 > $up2)
+             {
+                 return -1;
+             }
+             
+             //if up1 smallest
+             if($up1 < $cr2 && $up1 < $up2)
+             {
+                 return +1;
+             }
+             
+             //if up2 biggest
+             if($up2 > $cr1 && $up2 > $up1)
+             {
+                 return -1;
+             }
+             
+             //if up2 smallest
+             if($up2 < $cr1 && $up2 < $up1)
+             {
+                 return +1;
+             }
+             
+             //if cr2 biggest
+             if($cr2 > $cr1 && $cr2 > $up1 && $cr2 > $up2)
+             {
+                 return -1;
+             }
+             
+             //if cr2 smallest
+             if($cr2 < $cr1 && $cr2 < $up1 && $cr2 < $up2)
+             {
+                 return +1;
+             }
+             
+             //if cr1 biggest
+             if($cr1 > $up2 && $cr1 > $up2 && $cr1 > $cr2)
+             {
+                 return -1;
+             }
+             
+             //if cr1 smallest
+             if($cr1 < $up2 && $cr1 < $up2 && $cr1 < $cr2)
+             {
+                 return +1;
+             }
+
+            return 0;
+        };
+        
+        usort($ideas, "sortme");
+
         return $ideas;
     }
     
