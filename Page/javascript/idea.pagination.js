@@ -1,6 +1,5 @@
 $.widget("idea.pagination", {
     load: function (idea_count) {
-		var that = this;
         $("#current_page").val(0);
         //var idea_count = $(".idea_count").val();
         //calculate the amount of pages we need
@@ -29,11 +28,11 @@ $.widget("idea.pagination", {
             this.go_to_page(new_page);
         }
     },
-    next: function (that) {
+    next: function () {
         var new_page = parseInt($("#current_page").val()) + 1;
         //if there is an item after the current active link run the function  
         if ($(".active").next(".page_link").length === true) {
-            that.go_to_page(new_page);
+            this.go_to_page(new_page);
         }
     },
     go_to_page: function (page_num) {
