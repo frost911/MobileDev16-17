@@ -63,5 +63,8 @@ $.widget("idea.ideaList", {
             });
             this.element.append(ideaElement);
         }
+		//nur die ersten 10 anzeigen
+		$(".idea").hide();
+        $(".idea").slice(0, 10).show();
     }
 });
